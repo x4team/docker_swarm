@@ -19,15 +19,14 @@ apt install wget git nano vim htop apt-transport-https \
 ca-certificates curl gnupg2 gnupg-agent software-properties-common ufw sudo -y
 ``` 
 
-**0.3)  Добавим нашего пользователя(заменить на своего) в группу ```sudo:```**
-
-```
-usermod -aG sudo nameuser
-```
+**0.3)  Добавим нашего пользователя в группу ```sudo```(заменить на своего):**
 ```
 cp /etc/sudoers /etc/sudoers.orginal && \
 chmod  0440  /etc/sudoers && \
 service sshd restart
+```
+```
+usermod -aG sudo nameuser
 ```
 **0.4) Выйдем и перелогинимся по ssh в систему под нашим пользователем:**
 ```
