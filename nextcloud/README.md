@@ -80,6 +80,8 @@ sudo ufw allow 2377/tcp && sudo ufw allow 4789/udp
 ```
 sudo service sshd restart && sudo ufw allow 22/tcp && \
 sudo systemctl restart docker
+```
+```
 sudo ufw enable && sudo ufw reload
 ```
 
