@@ -22,7 +22,7 @@ ca-certificates curl gnupg2 gnupg-agent software-properties-common ufw sudo -y
 **0.3)  Добавим нашего пользователя(заменить на своего) в группу ```sudo:```**
 
 ```
-usermod -aG sudo nameuser && \
+usermod -aG sudo nameuser
 cp /etc/sudoers /etc/sudoers.orginal && \
 chmod  0440  /etc/sudoers && \
 service sshd restart
