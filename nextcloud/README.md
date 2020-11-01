@@ -23,6 +23,8 @@ ca-certificates curl gnupg2 gnupg-agent software-properties-common ufw sudo -y
 
 ```
 usermod -aG sudo nameuser
+```
+```
 cp /etc/sudoers /etc/sudoers.orginal && \
 chmod  0440  /etc/sudoers && \
 service sshd restart
