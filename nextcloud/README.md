@@ -49,7 +49,7 @@ sudo localedef -i en_US -f UTF-8 en_US.UTF-8
 **0.6) Добавим ключ репозитория Docker и сам репозиторий:**
 
 ```
-sudo curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - 
+sudo curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add - 
 ```
 
 ```
