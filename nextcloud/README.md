@@ -31,7 +31,12 @@ service sshd restart
 ```
 **0.4) Выйдем и перелогинимся по ssh в систему под нашим пользователем:**
 ```
-exit && exit
+exit
+```
+```
+exit
+```
+```
 ssh user@your_ip
 ```
 
