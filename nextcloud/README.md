@@ -1,4 +1,4 @@
-Создаем КЛАСТЕР NextCloudD на Docker Swarm (Debian Linux)
+Создаем КЛАСТЕР NextCloud на Docker Swarm (Debian Linux)
 ==============================
 
 ![Кластер на Docker Swarm](https://miro.medium.com/max/653/1*A7hv9CX6Su-5SBR3WB0SDA.png "Докер Swarm")
