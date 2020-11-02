@@ -488,12 +488,18 @@ docker swarm leave --force
 И далее перезайти заново по токену
 *Либо нужно полностью обновить ноду:
 ```
-sudo systemctl docker stop && \
+sudo systemctl stop docker && \
 sudo rm -rf /var/lib/docker/swarm/* && \
-sudo docker volume prune && \
-sudo docker system prune && \
 sudo rm -rf /var/lib/docker/overlay2/* && \
-sudo systemctl docker start && \
+sudo systemctl start docker
+```
+```
+sudo docker volume prune
+```
+```
+sudo docker system prune
+```
+```
 sudo reboot
 ```
 И заново законнектить ноду по токену воркера или менеджера
