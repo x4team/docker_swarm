@@ -628,8 +628,28 @@ secrets:
 ```
 
 
-
-**3.11)ПОЛЕЗНЫЕ КОМАНДЫ ДОКЕР:**
+**3.11)ПОЛЕЗНЫЕ КОМАНДЫ DOCKER-COMPOSE:**
+*Update all images: 
+```
+docker-compose pull
+```
+*Update a single image: 
+```
+docker-compose pull nameimage
+```
+*Let compose update all containers as necessary: 
+```
+docker-compose up -d
+```
+*Update a single container: 
+```
+docker-compose up -d namecontainer
+```
+*You can also remove the old dangling images: 
+```
+docker image prune
+```
+**3.12)ПОЛЕЗНЫЕ КОМАНДЫ DOCKER:**
 *Создать самостоятельный том можно следующей командой:
 ```
 docker volume create —-name my_volume
