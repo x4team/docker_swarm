@@ -680,7 +680,10 @@ docker run --volumes-from container1 image-name-2
 	docker volume rm
 	docker volume prune
 	```
-	```docker-compose down -v``` *Удаление контейнеров вместе с волюмами
+	```
+	docker-compose down -v
+	```
+	*Удаление контейнеров вместе с волюмами
 *Список часто используемых параметров для --mount, применимых \
 в команде вида docker run --mount my_options my_image:
 ```
