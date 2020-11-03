@@ -644,7 +644,7 @@ secrets:
     file: ./cert/site.crt
 ```
 
-**3.11)Директива health
+**3.11)Директива health:**
 ```
     healthcheck:
       test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
