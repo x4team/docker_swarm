@@ -513,7 +513,7 @@ sudo reboot
       - PGID=1000
       ...
 ...
-      ```
+```
 
 **3.4) ВАЖНО! БЭКАП SWARM:**
 
@@ -644,7 +644,7 @@ secrets:
     file: ./cert/site.crt
 ```
 
-**3.12)Директива health
+**3.11)Директива health
 ```
     healthcheck:
       test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
@@ -659,7 +659,7 @@ secrets:
 ```
 
 
-**3.11)ПОЛЕЗНЫЕ КОМАНДЫ DOCKER-COMPOSE:**
+**3.12)ПОЛЕЗНЫЕ КОМАНДЫ DOCKER-COMPOSE:**
 *Update all images: 
 ```
 docker-compose pull
@@ -680,7 +680,7 @@ docker-compose up -d namecontainer
 ```
 docker image prune
 ```
-**3.12)ПОЛЕЗНЫЕ КОМАНДЫ DOCKER:**
+**3.13)ПОЛЕЗНЫЕ КОМАНДЫ DOCKER:**
 *Создать самостоятельный том можно следующей командой:
 ```
 docker volume create —-name my_volume
