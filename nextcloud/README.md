@@ -504,6 +504,17 @@ sudo reboot
 ```
 И заново законнектить ноду по токену воркера или менеджера
 
+* Если мы примонтировали том, а приложению нет доступа на запись, \ 
+тогда использовать  для контейнера ОБЯЗАТЕЛЬНО:
+```
+...
+    environment:
+      - PUID=1000
+      - PGID=1000
+      ...
+...
+      ```
+
 **3.4) ВАЖНО! БЭКАП SWARM:**
 
 ```
@@ -631,6 +642,20 @@ secrets:
     file: ./cert/site.key
   site.crt:
     file: ./cert/site.crt
+```
+
+**3.12)Директива health
+```
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      interval: "5s"
+      timeout: "1s"
+```
+```
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 8000 || exit 1"]
+      interval: "5s"
+      timeout: "1s"
 ```
 
 
