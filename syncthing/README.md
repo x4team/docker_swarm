@@ -156,8 +156,12 @@ volumes:
 и создать пустой файл touch /config/Sync/.stfolder
 
 **3.3)** ЗАПУСКАЕМ SWARM:
+
 ```sudo docker stack deploy -c docker-compose.yml syncthing```
+
 *Если будет необходимо ЗАВЕРШИТЬ стэк, сначала мы завершаем syncthing_main (смотри пункт ниже 3.4 - это обычный докер-композ),
 а уже потом сам docker stack , так как syncthing_main использовал наш том из swarm.
+
 **3.4)** ЗАПУСКАЕМ наш первый главный syncthing_main (смотри пункт 1.2):
+
 ```sudo docker-compose up -d```
