@@ -63,7 +63,7 @@ It is the second Syncthing (see point 1.0), but is launched first as a Swarm ser
 
 *We also clear its directory (see point 2)
 
-**3.1)** Change the whole config to this one:
+**3.1)** Change the whole config for syncthing_child to this one:
 
 *Do not forget that our configurations are taken from the temp subdirectory - as additional protection,
 further, when Swarm creates them in its environment, they are no longer needed in the directory.
