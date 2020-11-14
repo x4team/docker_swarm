@@ -1,4 +1,5 @@
 **Before we start configuring Swarm for the Syncthing application, let's define what tasks should be accomplished with this.**
+
 _I think 90% of the time we want to solve the problem of fast synchronization of heavy data (or big data) on mounted volumes. The Syncthing app will handle this.
 Before setting up, we need to understand the outline of our synchronization logic.
 So in short:
