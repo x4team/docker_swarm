@@ -1,3 +1,23 @@
+**Before we start configuring Swarm for the Syncthing application, let's define what tasks should be accomplished with this.**
+_I think 90% of the time we want to solve the problem of fast synchronization of heavy data (or big data) on mounted volumes. The Syncthing app will handle this.
+Before setting up, we need to understand the outline of our synchronization logic.
+So in short:
+1) We prepare 2 configurations of the Syncthing application via docker-compose (we synchronize the default directories with each other), the configurations of which we will use further for synchronization.
+That is, we will have one main Syncthing, and the second child, which will be used for Swarm.
+
+2) Our synchronization will be one-way from the main node to the workers, since for important reasons the data must be reference so that we can rely on this.
+And we also cannot configure two-way synchronization, since workers may not always work the same way (network problems, worker failures, and so on).
+And we also need to understand that Syncthing is configured between two devices, but not between itself.
+
+3) Next, using the configuration of the Syncthing child application, we deploy the stack and services through the configuration, in which we can immediately determine the volume that will participate in synchronization. For example, if it is written as html, and we named the stack "syncthing", then the volume name will be "syncthing_html".
+And in addition, we put the: z key for this volume so that it can be used by two applications at once on the master node (the main Syncthing via docker-compose and the child Syncthing via Swarm).
+
+4) We launch our main Syncthing via docker-compose up -d, and PRELIMINARY specify our volume "syncthing_html", which is located right there in our master node, in the configuration.
+
+5) Thus, we got the synchronization of our heavy data in the volume on the master node and then it spreads quickly to our workers.
+And as soon as we add a new worker, the child Syncthing is deployed on it, and all data from the master node is quickly transferred to it._
+
+
 ***Syncthing application configuration***
 
 **1.0)** We create 2 Syncthing applications (via docker-compose) with different access ports and synchronize their default folders with each other, choosing synchronization from the first application to the second (without double synchronization). 
