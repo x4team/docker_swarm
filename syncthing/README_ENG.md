@@ -2,7 +2,7 @@
 
 _I think 90% of the time we want to solve the problem of fast synchronization of heavy data (or big data) on mounted volumes. The Syncthing app will handle this.
 Before setting up, we need to understand the outline of our synchronization logic.
-So in short:
+So in short:_
 1) We prepare 2 configurations of the Syncthing application via docker-compose (we synchronize the default directories with each other), the configurations of which we will use further for synchronization.
 That is, we will have one main Syncthing, and the second child, which will be used for Swarm.
 
